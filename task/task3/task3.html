@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task3</title>
+    <style>
+    #container{
+        width:400px;
+        height:200px;
+        background-color: black;
+    }
+    li{
+        display: flex;
+        justify-content: center;
+        float: left;
+        width:50px;
+        height:30px;
+        background-color: white;
+        color: black;
+        border:1px solid black;
+        border-radius: 10px;
+        margin-right:20px;
+        margin-top: 80px;
+    
+    }
+    li:hover{
+        display:block;
+        
+    }
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+
+        window.onload = function() {
+    var items = document.getElementsByTagName('li');
+    const menu = ['list1', 'list2', 'list3', 'list3', 'list4'];
+    for(let i = 0; i < items.length; i++){
+        items[i].onclick= function () {
+            items[i].innerHTML = menu[i];
+        }
+    }
+};
+        </script>
+    <ul id="container">
+        <li>text1</li>
+        <li>text2</li>
+        <li>text3</li>
+        <li>text4</li>
+        <li>text5</li>
+ </ul>
+</body>
+</html>

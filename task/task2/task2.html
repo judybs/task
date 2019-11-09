@@ -1,0 +1,68 @@
+//直接绑定html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task2</title>
+    <style>
+    #box{
+        height:100px;
+        width:200px;
+        border:2px;
+        border-radius: 25px;
+        background:aquamarine;
+        color:black;
+        align-content: center;
+        opacity:0.8;
+    }
+    </style>
+</head>
+<body>
+    <script >
+         console.log("我的透明度从0.8变为0.5了");
+        </script>
+        <button id="box"type="submit"  onclick="document.getElementById('box').style.opacity='0.5'">
+        submit
+        </button>
+
+</body>
+</html>
+
+
+//绑在js里
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task2</title>
+    <style>
+        #box{
+            height:100px;
+            width:200px;
+            border:2px;
+            border-radius: 25px;
+            background:aquamarine;
+            color:black;
+            align-content: center;
+            opacity:0.8;
+        }
+        </style>
+</head>
+<body>
+   
+        <button id="box">
+            submit
+        </button>
+         <script>
+          console.log("我的透明度从0.8变为0.5了");
+        var b =document.getElementById('box');
+        box.onclick = function(){
+            document.getElementById('box').style.opacity='0.5'
+        }
+        </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task 1</title>
+</head>
+<body>
+  
+    <ul class="nav">
+        <li class="item">爱好</li>
+        <li class="item">评论</li>
+        <li class="item">运动</li>
+    </ul>
+      <script type="text/javascript">
+     
+      var otest = document.getElementsByClassName('nav');
+
+      var n=otest[0];                               //otest的第一个是nav
+      var newnode=document.createElement('li');       
+      newnode.innerHTML="关于";                       //在最后面加“关于”
+      n.appendChild(newnode); 
+
+      var otest1=document.getElementsByClassName('item');
+
+      var node=otest1[0];                             //otest1的第一个是第一个item“爱好”
+      var newnode=document.createElement('li');           //在最前面加“首页”
+      newnode.innerHTML="首页";
+     n.insertBefore(newnode,node);
+
+     var node1=otest1[2];                             //otest1的第三个————“运动”
+     var newnode1=document.createElement('li');
+     newnode1.innerHTML="文章";
+     n.replaceChild(newnode1,node1);
+
+     var node2=otest1[1];                             //otest1的第二个————“评论”
+     n.removeChild(node2);                            //删掉“评论”
+        </script>
+</body> 
+</html>
