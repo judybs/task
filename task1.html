@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+       function Father()
+       {
+           this.bloodType = 'A';	
+       } 
+       let father = new Father();
+       console.log (father);
+
+     Father.prototype.wife="miss";
+     console.log(Father.prototype.wife) ;
+
+       
+     function Son(bloodType,name,age,phone)
+       {Father.call(this,bloodType);
+        this.name=name;
+        this.age=age;
+        this.phone=phone;
+       }
+     
+
+    function Daughter(bloodType,name,age,phone)
+       {Father.call(this,bloodType);
+        this.name=name;
+        this.age=age;
+        this.phone=phone;
+       }
+      
+
+    let son1 = new Son
+       (
+        'Father','mike','5','15110518746'
+       )
+       console.log(son1); 
+       
+       Son.prototype.constructor===Son;
+      console.log (Son.prototype.constructor);
+
+
+    let daughter1 = new Daughter
+       (
+        'Father','mier','15','15110518746'
+       )
+        console.log(daughter1);
+
+        Daughter.prototype.constructor===Daughter;
+      console.log (Daughter.prototype.constructor);
+
+
+        
+    </script>
+</body>
+</html>
