@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <script type="text/javascript">
-        function push(array, ...items) {
+    //1
+    function push(array, ...items) {
     array.push(...items);
     }
 
@@ -18,7 +9,34 @@
 
     const numbers = [-4,-1,0,3,10];
     add(...numbers) 
-    </script>
-    
-</body>
-</html>
+
+    //2
+    class Pather {
+        constructor(年龄,身高) {
+          this.年龄 = 36;
+          this.身高 = 170;
+        }
+      
+        toString() {
+          return '(' + this.年龄 + ', ' + this.身高 + ')';
+        }
+      }
+      class Child extends Father {
+        constructor(年龄,身高,姓名) {
+          super(年龄, 身高); 
+          this.姓名 = 李华;
+        }
+        toString() {
+          return this.color + ' ' + super.toString(); 
+        }
+      }
+      
+
+    //3
+    const s = new Set();
+
+[2,3,7,5,2,6,9,7,0].forEach(x => s.add(x));
+
+for (let i of s) {
+  console.log(i);
+}
